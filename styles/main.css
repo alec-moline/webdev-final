@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Styles for header */
+header {
+    display: flex;
+    background-color: #FFBB5C;
+    flex-basis: 20%;
+}
+
+#spain-map {
+    float: left;
+    height: 20px;
+}
+
+header > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Styles for nav menu */
+nav {
+    background-color: #FF9B50;
+    flex-basis: 7%;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Styles for main content section */
+main {
+    background-color: #E25E3E;
+    display: flex;
+    flex-basis: 68%;
+}
+
+section {
+    flex-basis: 80%;
+}
+
+aside {
+    background-color:  #FFBB5C;
+    display: flex;
+    flex-basis: 20%;
+}
+
+aside > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles for footer */
+footer {
+    background-color: #C63D2F;
+    flex-basis: 5%;
+    text-align: center;
+    padding: 0.75em;
+}
+
+/* General element styles */
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
