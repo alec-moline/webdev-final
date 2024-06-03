@@ -1,58 +1,150 @@
+@font-face {
+    font-family: DarkAndBlack;
+    src: url("../fonts/DarkAndBlack.ttf");
+}
+
+/* General element styles */
 * {
     margin: 0;
     padding: 0;
 }
 
+html {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
+    width: 60%;
+    font-family: sans-serif;
+    color: #c31400;
+    border: 2px solid #C63D2F;
+    text-underline-offset: 0.3rem;
+}
+
+a {
+    color: inherit;
+}
+
+audio {
+    background-image: linear-gradient(to right, #E25E3E 0%, #FFBB5C 100%);
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: DarkAndBlack;
+}
+
+h2 {
+    font-family: DarkAndBlack;
+}
+
+ul {
+    list-style-type: none;
 }
 
 /* Styles for header */
 header {
     display: flex;
-    background-color: #FFBB5C;
     flex-basis: 20%;
+    align-items: center;
+    background-image: linear-gradient(to right, #FFBB5C 0%, #E25E3E 100%);
+    border-bottom: 2px solid #C63D2F;
+    padding-right: 1.5rem;
 }
 
-#spain-map {
+header > img {
     float: left;
-    height: 20px;
-}
-
-header > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 200px;
+    padding: 0 1.5rem;
+    vertical-align: middle;
 }
 
 /* Styles for nav menu */
 nav {
     background-color: #FF9B50;
+    display: flex;
     flex-basis: 7%;
+    border-bottom: 2px solid #C63D2F;
 }
 
 nav > ul {
-    display: flex;
+    display: flex; 
     justify-content: space-evenly;
+    justify-self: center;
+    flex-basis: 100%;
+}
+
+nav > ul > li {
+    align-content: center;
+    flex-basis: 100%;
+    text-align: center;
+    font-family: DarkAndBlack;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav > ul > li:nth-child(-n+3)  {
+    border-right: 2px solid #C63D2F;
 }
 
 /* Styles for main content section */
 main {
-    background-color: #E25E3E;
+    background-color: #FFBB5C;
     display: flex;
     flex-basis: 68%;
 }
 
 section {
     flex-basis: 80%;
+    padding: 1rem 2rem 1.5rem 2rem;
+}
+
+section > p {
+    font-size: 1.3rem;
+    margin-top: 1.2rem;
+}
+
+section > img {
+    min-width: 200px;
+    width: 40%;
+    float: right;
+    margin: 1.5rem 0 1rem 1rem;
+}
+
+#food-pics {
+    display: inline;
+    float: right;
+    margin-left: 1.5rem;
+    width: 40%;
+}
+
+#food-pics > img {
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
 }
 
 aside {
-    background-color:  #FFBB5C;
     display: flex;
+    flex-direction: column;
     flex-basis: 20%;
+    border-left: 2px solid #C63D2F;
+    padding: 1rem 2rem;
+}
+
+aside > h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 aside > ul {
@@ -60,19 +152,33 @@ aside > ul {
     flex-direction: column;
 }
 
+aside > ul > li {
+    list-style-type: disc;
+    margin: 1rem 0.5rem;
+    font-size: 1.25rem;
+}
+
 /* Styles for footer */
 footer {
-    background-color: #C63D2F;
+    background-image: linear-gradient(to right, #E25E3E 0%, #FFBB5C 100%);
     flex-basis: 5%;
+    border-top: 2px solid #C63D2F;
     text-align: center;
     padding: 0.75em;
 }
 
-/* General element styles */
-a {
+footer a {
     text-decoration: none;
 }
 
-ul {
-    list-style-type: none;
+/* Media queries */
+
+@media only screen and (max-width: 1140px) {
+    html {
+        font-size: 12px;
+    }
+
+    section > img {
+        float: none;
+    }
 }
